@@ -1,0 +1,17 @@
+{
+    "name": "extensions.unity.mouse.parallax",
+    "rootNamespace": "",
+    "references": [
+        "UniTask",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

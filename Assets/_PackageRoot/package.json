@@ -1,28 +1,29 @@
 {
-    "name": "extensions.unity.mouse.parallax",
-    "displayName": "Unity Mouse Parallax",
-	"author": { "name": "Ivan Murzak", "url": "https://github.com/IvanMurzak" },
-    "version": "1.0.0",
-    "unity": "2019.2",
-    "description": "Unity Parallax based on mouse input.",
-	"dependencies": {
-		"com.cysharp.unitask": "2.2.5"
+  "name": "extensions.unity.mouse.parallax",
+  "displayName": "Unity Mouse Parallax",
+  "author": { "name": "Ivan Murzak", "url": "https://github.com/IvanMurzak" },
+  "version": "1.0.3",
+  "unity": "2019.2",
+  "description": "Unity Parallax based on mouse input.",
+  "dependencies": {
+    "com.unity.inputsystem": "1.3.0",
+    "com.cysharp.unitask": "2.2.5"
+  },
+  "scopedRegistries": [
+    {
+      "name": "Unity Extensions",
+      "url": "https://registry.npmjs.org",
+      "scopes": [
+        "extensions.unity"
+      ]
     },
-    "scopedRegistries": [
-      {
-        "name": "Unity Extensions",
-        "url": "https://registry.npmjs.org",
-        "scopes": [
-          "extensions.unity"
-        ]
-      },
-      {
-        "name": "NPM",
-        "url": "https://registry.npmjs.org",
-        "scopes": [
-          "com.cysharp",
-          "com.neuecc"
-        ]
-      }
-    ]
+    {
+      "name": "NPM",
+      "url": "https://registry.npmjs.org",
+      "scopes": [
+        "com.cysharp",
+        "com.neuecc"
+      ]
+    }
+  ]
 }

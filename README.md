@@ -1,7 +1,7 @@
 # Unity-Mouse-Parallax
 ![npm](https://img.shields.io/npm/v/extensions.unity.mouse.parallax) ![License](https://img.shields.io/github/license/IvanMurzak/Unity-Mouse-Parallax)
 
-Unity Parallax based on mouse input.
+Unity Parallax based on mouse input. Alternative version to [Unity-Gyroscope-Parallax](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax).
 
 ### Features
 - ✔️ support legacy Input System

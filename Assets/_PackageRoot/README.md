@@ -1,41 +1,47 @@
-# Unity-Gyroscope-Parallax
-![npm](https://img.shields.io/npm/v/extensions.unity.gyroscope.parallax) ![License](https://img.shields.io/github/license/IvanMurzak/Unity-Gyroscope-Parallax)
+# Unity-Mouse-Parallax
+![npm](https://img.shields.io/npm/v/extensions.unity.mouse.parallax) ![License](https://img.shields.io/github/license/IvanMurzak/Unity-Mouse-Parallax)
 
-Unity Parallax based on gyroscope components. Supported fake gyroscope for simulation in Unity Editor.
+Unity Parallax based on mouse input.
 
 ### Features
 - ✔️ support legacy Input System
 - ✔️ support new Input System
-- ✔️ ability to simulate gyroscope in Unity Editor
-- ✔️ move/rotate objects based on gyroscope
+- ✔️ move/rotate objects based on mouse input
 - ✔️ ability to add custom controllers
 
-![unity-gyroscope-parallax-small](https://user-images.githubusercontent.com/9135028/177197269-a11dd87c-3f6b-400d-bf91-01a9b051cb1b.gif)
+![Short Demo](https://user-images.githubusercontent.com/9135028/198884624-d8dacd24-41db-4488-b33c-59102809c336.gif)
 
-# GyroMover2D
-Moves list of objects using gyroscope.
+<details>
+  <summary>Full demo video</summary>
+  
+https://user-images.githubusercontent.com/9135028/198884331-8e084cda-77bb-427a-bb6a-7d6af585b26f.mp4
 
-![image](https://user-images.githubusercontent.com/9135028/166463235-50702210-3b09-417d-9b9a-547fce73ba15.png) ![image](https://user-images.githubusercontent.com/9135028/166465109-33274de8-84e3-44e4-a8ab-b7c1f3ea2380.png)
-
-![Unity_WTZrJSE6qY](https://user-images.githubusercontent.com/9135028/166468223-2992f1a9-8ead-454e-bc3a-5adaab832868.gif)
-
-
-# GyroRotator2D
-Rotates list of objects using gyroscope.
-
-![image](https://user-images.githubusercontent.com/9135028/176648393-cde4e34d-1c7c-4a58-9935-a5ff6081d2e7.png)
- ![image](https://user-images.githubusercontent.com/9135028/166465157-5f1325f3-8109-4a35-bd91-87082aa36cf9.png)
-
-![Unity_CeUGRyFD5v](https://user-images.githubusercontent.com/9135028/166467361-485a1e2b-f799-4700-ada8-3982e06f2245.gif)
+</details>
 
 
+# MouseMover2D
+Moves list of objects using mouse input.
 
-# How to install
+![Unity_2OiBF8IwNI](https://user-images.githubusercontent.com/9135028/198884833-761cd597-f749-4d02-8742-7fdf46c6144c.png)
+
+
+# MouseRotator2D
+Rotates list of objects using mouse input.
+
+![Unity_uWbnrUEaR2](https://user-images.githubusercontent.com/9135028/198884825-d3b2872e-5331-4519-afe6-9061b80ebd8c.png)
+
+
+# How to install - Option 1 (RECOMMENDED)
+- [Install OpenUPM-CLI](https://github.com/openupm/openupm-cli#installation)
+- Open command line in Unity project folder
+- `openupm --registry https://registry.npmjs.org add extensions.unity.mouse.parallax`
+
+# How to install - Option 2
 - Add this code to <code>/Packages/manifest.json</code>
 ```json
 {
   "dependencies": {
-    "extensions.unity.gyroscope.parallax": "1.4.1",
+    "extensions.unity.mouse.parallax": "1.0.0",
   },
   "scopedRegistries": [
     {
@@ -58,9 +64,6 @@ Rotates list of objects using gyroscope.
 ```
 
 # How to use
-- add needed `Gyro...` component to any GameObject
+- add needed `Mouse...` component to any GameObject
 - link Targets to list of targets
 - press 'Play' button in Unity Editor
-- find `Fake Gyroscope Manager` in `DonDestroyOnLoad` scene (appears in Play Mode)
-- ![image](https://user-images.githubusercontent.com/9135028/166464685-b6197e8a-547d-47ab-9039-824ce29f3ca5.png)
-- change XY values of `Gravity` and `Attitude` properties to simulate gyroscope in Unity Editor

@@ -1,5 +1,5 @@
 # Unity-Mouse-Parallax
-![npm](https://img.shields.io/npm/v/extensions.unity.mouse.parallax) ![License](https://img.shields.io/github/license/IvanMurzak/Unity-Mouse-Parallax)
+![npm](https://img.shields.io/npm/v/extensions.unity.mouse.parallax) ![License](https://img.shields.io/github/license/IvanMurzak/Unity-Mouse-Parallax) [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
 
 Unity Parallax based on mouse input. Alternative version to [Unity-Gyroscope-Parallax](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax).
 

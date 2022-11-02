@@ -64,6 +64,6 @@ Rotates list of objects using mouse input.
 ```
 
 # How to use
-- add needed `Mouse...` component to any GameObject
+- add needed `Mouse...2D` component to any GameObject
 - link Targets to list of targets
 - press 'Play' button in Unity Editor

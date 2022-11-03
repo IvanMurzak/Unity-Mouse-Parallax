@@ -41,7 +41,7 @@ Rotates list of objects using mouse input.
 ```json
 {
   "dependencies": {
-    "extensions.unity.mouse.parallax": "1.0.0",
+    "extensions.unity.mouse.parallax": "1.0.3",
   },
   "scopedRegistries": [
     {

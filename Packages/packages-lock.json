@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {},
-      "url": "https://registry.npmjs.org"
+      "url": "https://package.openupm.com"
     },
     "com.unity.collab-proxy": {
       "version": "1.15.18",

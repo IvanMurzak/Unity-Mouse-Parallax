@@ -44,12 +44,11 @@
   },
   "scopedRegistries": [
     {
-      "name": "registry.npmjs.org",
-      "url": "https://registry.npmjs.org",
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
       "scopes": [
-        "com.cysharp.unitask",
-        "extensions.unity.gyroscope.manager",
-        "org.npmjs"
+        "com.cysharp",
+        "com.neuecc"
       ]
     }
   ]

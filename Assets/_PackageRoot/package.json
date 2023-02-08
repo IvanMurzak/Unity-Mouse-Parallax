@@ -5,21 +5,19 @@
   "version": "1.0.3",
   "unity": "2019.2",
   "description": "Unity Parallax based on mouse input.",
+  "keywords": [
+    "parallax",
+    "mouse",
+    "unity"
+  ],
   "dependencies": {
     "com.unity.inputsystem": "1.3.0",
-    "com.cysharp.unitask": "2.2.5"
+    "com.cysharp.unitask": "2.3.3"
   },
   "scopedRegistries": [
     {
-      "name": "Unity Extensions",
-      "url": "https://registry.npmjs.org",
-      "scopes": [
-        "extensions.unity"
-      ]
-    },
-    {
-      "name": "NPM",
-      "url": "https://registry.npmjs.org",
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
       "scopes": [
         "com.cysharp",
         "com.neuecc"

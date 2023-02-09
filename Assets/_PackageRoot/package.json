@@ -19,8 +19,7 @@
       "name": "package.openupm.com",
       "url": "https://package.openupm.com",
       "scopes": [
-        "com.cysharp",
-        "com.neuecc"
+        "com.cysharp"
       ]
     }
   ]

@@ -1,8 +1,11 @@
 {
   "name": "extensions.unity.mouse.parallax",
   "displayName": "Unity Mouse Parallax",
-  "author": { "name": "Ivan Murzak", "url": "https://github.com/IvanMurzak" },
-  "version": "1.0.3",
+  "author": {
+    "name": "Ivan Murzak",
+    "url": "https://github.com/IvanMurzak"
+  },
+  "version": "1.0.4",
   "unity": "2019.2",
   "description": "Unity Parallax based on mouse input.",
   "keywords": [

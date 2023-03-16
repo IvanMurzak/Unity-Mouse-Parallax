@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.cysharp.unitask": {
-      "version": "2.2.5",
+      "version": "2.3.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {},

@@ -150,7 +150,7 @@ jobs:
           echo "Cleaned Unity artifacts and reset tracked files"
 
       - name: Export Unity Package
-        uses: game-ci/unity-builder@v4
+        uses: game-ci/unity-builder@v5
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
@@ -163,6 +163,7 @@ jobs:
           buildsPath: build
           buildMethod: extensions.unity.mouse.parallax.Installer.PackageExporter.ExportPackage
           customParameters: -CI true -GITHUB_ACTIONS true
+          allowDirtyBuild: true
 
       - name: Upload Unity Package as artifact
         uses: actions/upload-artifact@v4

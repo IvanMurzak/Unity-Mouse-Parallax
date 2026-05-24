@@ -1,0 +1,16 @@
+{
+    "name": "extensions.unity.mouse.parallax.Installer",
+    "rootNamespace": "extensions.unity.mouse.parallax.Installer",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

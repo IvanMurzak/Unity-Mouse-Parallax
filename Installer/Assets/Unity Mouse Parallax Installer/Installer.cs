@@ -16,7 +16,7 @@ namespace extensions.unity.mouse.parallax.Installer
     public static partial class Installer
     {
         public const string PackageId = "extensions.unity.mouse.parallax";
-        public const string Version = "1.0.0";
+        public const string Version = "1.0.5";
 
         static Installer()
         {

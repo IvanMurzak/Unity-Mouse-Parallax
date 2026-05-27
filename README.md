@@ -1,174 +1,76 @@
-# [Unity Package Template](https://github.com/IvanMurzak/Unity-Package-Template)
+# Unity-Mouse-Parallax
+![npm](https://img.shields.io/npm/v/extensions.unity.mouse.parallax) [![openupm](https://img.shields.io/npm/v/extensions.unity.mouse.parallax?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/extensions.unity.mouse.parallax/) ![License](https://img.shields.io/github/license/IvanMurzak/Unity-Mouse-Parallax) [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
 
-<img width="100%" alt="Stats" src="https://user-images.githubusercontent.com/9135028/198754538-4dd93fc6-7eb2-42ae-8ac6-d7361c39e6ef.gif"/>
+Unity Parallax based on mouse input. Alternative version to [Unity-Gyroscope-Parallax](https://github.com/IvanMurzak/Unity-Gyroscope-Parallax).
 
-Unity Editor supports NPM packages. It is way more flexible solution in comparison with classic Plugin that Unity is using for years. NPM package supports versioning and dependencies. You may update / downgrade any package very easily. Also, Unity Editor has UPM (Unity Package Manager) that makes the process even simpler.
+### Features
+- ✔️ support legacy Input System
+- ✔️ support new Input System
+- ✔️ move/rotate objects based on mouse input
+- ✔️ ability to add custom controllers
 
-This template repository is designed to be easily updated into a real Unity package. Please follow the instruction bellow, it will help you to go through the entire process of package creation, distribution and installing.
+![Short Demo](https://user-images.githubusercontent.com/9135028/198884624-d8dacd24-41db-4488-b33c-59102809c336.gif)
 
-# Steps to make your package
+<details>
+  <summary>Full demo video</summary>
+  
+https://user-images.githubusercontent.com/9135028/198884331-8e084cda-77bb-427a-bb6a-7d6af585b26f.mp4
 
-### 1️⃣ Click the button - create repository
+</details>
 
-[![create new repository](https://user-images.githubusercontent.com/9135028/198753285-3d3c9601-0711-43c7-a8f2-d40ec42393a2.png)](https://github.com/IvanMurzak/Unity-Package-Template/generate)
 
-### 2️⃣ Clone your new repository
+# MouseMover2D
+Moves list of objects using mouse input.
 
-### 3️⃣ Initialize Project
+![Unity_2OiBF8IwNI](https://user-images.githubusercontent.com/9135028/198884833-761cd597-f749-4d02-8742-7fdf46c6144c.png)
 
-Use the initialization script to rename the package and replace all placeholders.
+# MouseRotator2D
+Rotates list of objects using mouse input.
 
-```powershell
-./commands/init.ps1 -PackageId "com.company.package" -PackageName "My Package"
+![Unity_uWbnrUEaR2](https://user-images.githubusercontent.com/9135028/198884825-d3b2872e-5331-4519-afe6-9061b80ebd8c.png)
+
+# Installation
+
+### Option 1 - Installer
+
+- **[⬇️ Download Installer](https://github.com/IvanMurzak/Unity-Mouse-Parallax/releases/download/1.0.5/Unity-Mouse-Parallax-Installer.unitypackage)**
+- **📂 Import installer into Unity project**
+  > - You may use double click on the file - Unity will open it
+  > - OR: You may open Unity Editor first, then click on `Assets/Import Package/Custom Package`, then choose the file
+
+### Option 2 - OpenUPM-CLI
+
+- [⬇️ Install OpenUPM-CLI](https://github.com/openupm/openupm-cli#installation)
+- 📟 Open command line in Unity project folder
+
+```bash
+openupm add extensions.unity.mouse.parallax
 ```
 
-This script will:
-- Rename directories and files.
-- Replace `extensions.unity.mouse.parallax`, `Unity Mouse Parallax`, etc. in all files and folder names.
+### Option 3 - Manual (manifest.json)
 
-### 4️⃣ Update `package.json`
-Open `Unity-Package/Assets/root/package.json` and update:
-- `description`
-- `author`
-- `keywords`
-- `unity` (minimum supported Unity version)
+- Add this code to `/Packages/manifest.json`
 
-### 5️⃣ Generate Meta Files
-
-#### Using script
-   Open Unity project to generate `.meta` files.
-   **On Mac and Linux**:
-   ```bash
-   ./commands/open-all-projects-unix.sh
-   ```
-   **On Windows**:
-   ```bash
-   ./commands/open-all-projects-windows.ps1
-   ```
-#### OR Manually
-   You may open the projects manually to achieve the same result.
-   - Open Unity Hub.
-   - Add the `Installer` folder as a project.
-   - Add the `Unity-Package` folder as a project.
-   - Open both projects in Unity Editor. This will generate the necessary `.meta` files.
-
-### 6️⃣ Add files into `Unity-Package/Assets/root` folder
-
-[Unity guidelines](https://docs.unity3d.com/Manual/cus-layout.html) about organizing files into the package root directory
-
-```text
-  <root>
-  ├── package.json
-  ├── README.md
-  ├── CHANGELOG.md
-  ├── LICENSE.md
-  ├── Third Party Notices.md
-  ├── Editor
-  │   ├── [company-name].[package-name].Editor.asmdef
-  │   └── EditorExample.cs
-  ├── Runtime
-  │   ├── [company-name].[package-name].asmdef
-  │   └── RuntimeExample.cs
-  ├── Tests
-  │   ├── Editor
-  │   │   ├── [company-name].[package-name].Editor.Tests.asmdef
-  │   │   └── EditorExampleTest.cs
-  │   └── Runtime
-  │        ├── [company-name].[package-name].Tests.asmdef
-  │        └── RuntimeExampleTest.cs
-  ├── Samples~
-  │        ├── SampleFolder1
-  │        ├── SampleFolder2
-  │        └── ...
-  └── Documentation~
-       └── [package-name].md
+```json
+{
+  "dependencies": {
+    "extensions.unity.mouse.parallax": "1.0.5"
+  },
+  "scopedRegistries": [
+    {
+      "name": "package.openupm.com",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "extensions.unity",
+        "com.cysharp",
+        "com.ivanmurzak"
+      ]
+    }
+  ]
+}
 ```
 
-# Optional steps
-
-### 1. Version Management
-
-To update the package version across all files (package.json, Installer.cs, etc.), use the bump version script:
-
-```powershell
-.\commands\bump-version.ps1 -NewVersion "1.0.1"
-```
-
-### 2. Setup CI/CD
-
-To enable automatic testing and deployment:
-
-1.  **Configure GitHub Secrets**
-    Go to `Settings` > `Secrets and variables` > `Actions` > `New repository secret` and add:
-    -   `UNITY_EMAIL`: Your Unity account email.
-    -   `UNITY_PASSWORD`: Your Unity account password.
-    -   `UNITY_LICENSE`: Content of your `Unity_lic.ulf` file.
-        -   Windows: `C:/ProgramData/Unity/Unity_lic.ulf`
-        -   Mac: `/Library/Application Support/Unity/Unity_lic.ulf`
-        -   Linux: `~/.local/share/unity3d/Unity/Unity_lic.ulf`
-
-    **Package signing secrets (Unity 6.3+ signed packages)**
-
-    Starting with Unity 6.3, Package Manager warns about unsigned packages. The release workflow signs your package via Unity's UPM CLI, and **signing is a hard gate** — if these secrets are missing or misconfigured, the release fails and no GitHub Release is created. Add three more repository secrets (`Settings > Secrets and variables > Actions`):
-
-    -   `UPM_ORG_ID` — your Unity **organization ID**.
-    -   `UPM_SERVICE_ACCOUNT_KEY_ID` — a Unity Cloud **service-account key ID**.
-    -   `UPM_SERVICE_ACCOUNT_KEY_SECRET` — the matching **service-account key secret** (shown only once).
-
-    How to obtain them (in the [Unity Cloud Dashboard](https://cloud.unity.com/)):
-
-    1.  Pick the **organization** that will own/sign your package (Unity Cloud → Organizations → note its **Organization ID** → that's `UPM_ORG_ID`).
-    2.  **Administration → Service Accounts → Create service account.** In its **Keys** section, **Create key** → record the **Key ID** (`UPM_SERVICE_ACCOUNT_KEY_ID`) and **Secret key** (`UPM_SERVICE_ACCOUNT_KEY_SECRET`) — the secret is shown only once.
-    3.  Give the service account the **"Package Manager Package Signer"** role for that organization.
-
-    **Critical — three things must line up, or signing fails with "User does not have permission to sign package … with the provided credentials and organization":**
-
-    -   The **service account must belong to the same organization** as `UPM_ORG_ID`.
-    -   That **organization must be authorized to sign your package's namespace** (the reverse-domain name in `package.json`, e.g. `com.company.package`).
-    -   A brand-new org won't be authorized for a namespace until it **claims** it. To claim it, do a **one-time interactive sign in the Unity Editor**: Package Manager → select your package → Export → in the **Authoring Org** dropdown pick that organization → sign. After that one interactive sign, the CI service account can sign the same package automatically.
-
-    > Tip: the Unity UPM CLI can only *sign* a namespace the org already owns — it cannot *claim* one. The interactive Editor sign above is the only way to establish the association.
-
-    See [`docs/openupm-signing.md`](docs/openupm-signing.md) for the full setup, verification, and troubleshooting guide.
-
-2.  **Enable Workflows**
-    Rename the sample workflow files to enable them:
-    -   `.github/workflows/release.yml-sample` ➡️ `.github/workflows/release.yml`
-    -   `.github/workflows/test_pull_request.yml-sample` ➡️ `.github/workflows/test_pull_request.yml`
-
-3.  **Update Unity Version**
-    Open both `.yml` files and update the `UNITY_VERSION` (or similar variable) to match your project's Unity Editor version.
-
-4.  **Automatic Deployment**
-    The release workflow triggers automatically when you push to the `main` branch with an incremented version in `package.json`.
-
-# Final polishing
-
-- Update the `README.md` file (this file) with information about your package.
-- Copy the updated `README.md` to `Assets/root` as well.
-
-> ⚠️ Everything outside of the `root` folder won't be added to your package. But still could be used for testing or showcasing your package at your repository.
-
-### 1. Deploy to any registry you like
-
-- [Deploy to OpenUPM](https://github.com/IvanMurzak/Unity-Package-Template/blob/main/Docs/Deploy-OpenUPM.md) (recommended)
-- [Deploy using GitHub](https://github.com/IvanMurzak/Unity-Package-Template/blob/main/Docs/Deploy-GitHub.md)
-- [Deploy to npmjs.com](https://github.com/IvanMurzak/Unity-Package-Template/blob/main/Docs/Deploy-npmjs.md)
-
-### 2. Install your package into Unity Project
-
-When your package is distributed, you can install it into any Unity project.
-
-> Don't install into the same Unity project, please use another one.
-
-- [Install OpenUPM-CLI](https://github.com/openupm/openupm-cli#installation)
-- Open a command line at the root of Unity project (the folder which contains `Assets`)
-- Execute the command (for `OpenUPM` hosted package)
-
-  ```bash
-  openupm add Unity Mouse Parallax
-  ```
-
-# Final view in Unity Package Manager
-
-![image](https://user-images.githubusercontent.com/9135028/198777922-fdb71949-aee7-49c8-800f-7db885de9453.png)
+# How to use
+- add needed `Mouse...2D` component to any GameObject
+- link Targets to list of targets
+- press 'Play' button in Unity Editor

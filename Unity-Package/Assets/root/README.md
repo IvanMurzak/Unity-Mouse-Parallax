@@ -29,17 +29,32 @@ Rotates list of objects using mouse input.
 
 ![Unity_uWbnrUEaR2](https://user-images.githubusercontent.com/9135028/198884825-d3b2872e-5331-4519-afe6-9061b80ebd8c.png)
 
-# How to install - Option 1 (RECOMMENDED)
-- [Install OpenUPM-CLI](https://github.com/openupm/openupm-cli#installation)
-- Open command line in Unity project folder
-- `openupm add extensions.unity.mouse.parallax`
+# Installation
 
-# How to install - Option 2
-- Add this code to <code>/Packages/manifest.json</code>
+### Option 1 - Installer
+
+- **[⬇️ Download Installer](https://github.com/IvanMurzak/Unity-Mouse-Parallax/releases/download/1.0.5/Unity-Mouse-Parallax-Installer.unitypackage)**
+- **📂 Import installer into Unity project**
+  > - You may use double click on the file - Unity will open it
+  > - OR: You may open Unity Editor first, then click on `Assets/Import Package/Custom Package`, then choose the file
+
+### Option 2 - OpenUPM-CLI
+
+- [⬇️ Install OpenUPM-CLI](https://github.com/openupm/openupm-cli#installation)
+- 📟 Open command line in Unity project folder
+
+```bash
+openupm add extensions.unity.mouse.parallax
+```
+
+### Option 3 - Manual (manifest.json)
+
+- Add this code to `/Packages/manifest.json`
+
 ```json
 {
   "dependencies": {
-    "extensions.unity.mouse.parallax": "1.0.3",
+    "extensions.unity.mouse.parallax": "1.0.5"
   },
   "scopedRegistries": [
     {
@@ -47,7 +62,8 @@ Rotates list of objects using mouse input.
       "url": "https://package.openupm.com",
       "scopes": [
         "extensions.unity",
-        "com.cysharp"
+        "com.cysharp",
+        "com.ivanmurzak"
       ]
     }
   ]

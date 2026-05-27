@@ -1,0 +1,29 @@
+Unity-Tests/2022.3.62f3/Packages/manifest.json
+  s_e30159354ab104::t_622a8449120231 43-50
+docs/openupm-signing.md
+  s_e30159354ab104::t_b1248b369da174 5-7
+.github/workflows/release.yml
+  s_e30159354ab104::t_31e0688fb593aa 182
+Unity-Tests/6000.3.1f1/Packages/manifest.json
+  s_e30159354ab104::t_baf2ed31c35f1b 47-54
+Unity-Package/Packages/manifest.json
+  s_e30159354ab104::t_7528f73c8fec12 38-44
+Unity-Tests/2023.2.22f1/Packages/manifest.json
+  s_e30159354ab104::t_af6f0df635f16d 46-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "cb9cc5c2b42a7fe0b384402de4833b451d35814a",
+  "prompts": {},
+  "sessions": {
+    "s_e30159354ab104": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f53185a5-f95d-4b3d-91af-dff62c4c25e8",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Ivan Murzak <Ivan.D.Murzak@gmail.com>"
+    }
+  }
+}

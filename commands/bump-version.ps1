@@ -48,18 +48,6 @@ $VersionFiles = @(
         Pattern     = 'public const string Version = "[\d\.]+";'
         Replace     = 'public const string Version = "{VERSION}";'
         Description = "Installer C# version constant"
-    },
-    @{
-        Path        = "Unity-Package/Assets/root/README.md"
-        Pattern     = "https://github\.com/IvanMurzak/Unity-Mouse-Parallax/releases/download/[\d\.]+/Unity-Mouse-Parallax-Installer\.unitypackage"
-        Replace     = "https://github.com/IvanMurzak/Unity-Mouse-Parallax/releases/download/{VERSION}/Unity-Mouse-Parallax-Installer.unitypackage"
-        Description = "Package README download URL"
-    },
-    @{
-        Path        = "README.md"
-        Pattern     = "https://github\.com/IvanMurzak/Unity-Mouse-Parallax/releases/download/[\d\.]+/Unity-Mouse-Parallax-Installer\.unitypackage"
-        Replace     = "https://github.com/IvanMurzak/Unity-Mouse-Parallax/releases/download/{VERSION}/Unity-Mouse-Parallax-Installer.unitypackage"
-        Description = "Repository README download URL"
     }
 )
 
